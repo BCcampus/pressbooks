@@ -1,9 +1,1 @@
-.admin_page_pb_cloner #loader {
-  display: none;
-  vertical-align: middle;
-  margin-left: 1em;
-}
-
-.admin_page_pb_cloner #loader .spinner {
-  margin: 0;
-}
+.admin_page_pb_cloner #loader{display:none;vertical-align:middle;margin-left:1em}.admin_page_pb_cloner #loader .spinner{margin:0}
