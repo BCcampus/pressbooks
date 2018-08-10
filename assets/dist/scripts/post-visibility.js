@@ -1,1 +1,115 @@
-!function(e){var o={};function t(r){if(o[r])return o[r].exports;var s=o[r]={i:r,l:!1,exports:{}};return e[r].call(s.exports,s,s.exports,t),s.l=!0,s.exports}t.m=e,t.c=o,t.d=function(e,o,r){t.o(e,o)||Object.defineProperty(e,o,{configurable:!1,enumerable:!0,get:r})},t.n=function(e){var o=e&&e.__esModule?function(){return e.default}:function(){return e};return t.d(o,"a",o),o},t.o=function(e,o){return Object.prototype.hasOwnProperty.call(e,o)},t.p="/",t(t.s=22)}({22:function(e,o,t){e.exports=t("pfTG")},pfTG:function(e,o){jQuery(document).ready(function(e){var o=e("#web_visibility"),t=e("#require_password");o.is(":checked")?e("#pb-password-protected").show():e("#pb-password-protected").hide(),t.is(":checked")?e("#post_password").show():e("#post_password").hide(),o.change(function(){this.checked?e("#pb-password-protected").show():e("#pb-password-protected").hide()}),t.change(function(){this.checked?e("#post_password").show():e("#post_password").hide()})})}});
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "/";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 22);
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./assets/src/scripts/post-visibility.js":
+/***/ (function(module, exports) {
+
+jQuery(document).ready(function ($) {
+	// Checkboxes
+	var web_visibility = $('#web_visibility');
+	var require_password = $('#require_password');
+
+	// Init
+	if (web_visibility.is(':checked')) {
+		$('#pb-password-protected').show();
+	} else {
+		$('#pb-password-protected').hide();
+	}
+	if (require_password.is(':checked')) {
+		$('#post_password').show();
+	} else {
+		$('#post_password').hide();
+	}
+
+	// On Change
+	web_visibility.change(function () {
+		if (this.checked) {
+			$('#pb-password-protected').show();
+		} else {
+			$('#pb-password-protected').hide();
+		}
+	});
+	require_password.change(function () {
+		if (this.checked) {
+			$('#post_password').show();
+		} else {
+			$('#post_password').hide();
+		}
+	});
+});
+
+/***/ }),
+
+/***/ 22:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("./assets/src/scripts/post-visibility.js");
+
+
+/***/ })
+
+/******/ });

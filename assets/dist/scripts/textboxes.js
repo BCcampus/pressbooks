@@ -1,1 +1,299 @@
-!function(e){var t={};function n(s){if(t[s])return t[s].exports;var a=t[s]={i:s,l:!1,exports:{}};return e[s].call(a.exports,a,a.exports,n),a.l=!0,a.exports}n.m=e,n.c=t,n.d=function(e,t,s){n.o(e,t)||Object.defineProperty(e,t,{configurable:!1,enumerable:!0,get:s})},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="/",n(n.s=18)}({18:function(e,t,n){e.exports=n("p1xW")},p1xW:function(e,t){tinymce.PluginManager.add("textboxes",function(e){function t(e,t,n){return'<div class="textbox textbox--'+e+'"><header class="textbox__header"><p class="textbox__title">'+t+'</p></header>\n<div class="textbox__content">'+n+"</div></div><p></p>"}function n(e,t,n,s,a){return'<div class="textbox textbox--'+e+'"><header class="textbox__header"><p class="textbox__title">'+t+'</p></header>\n<div class="textbox__content"><p>'+n+"</p><ul><li>"+s+"</li><li>"+a+"</li></ul></div></div><p></p>"}function s(e,t,n){return'<div class="textbox textbox--sidebar textbox--'+e+'"><header class="textbox__header"><p class="textbox__title">'+t+'</p></header>\n<div class="textbox__content">'+n+"</div></div><p></p>"}function a(e,t,n,s,a){return'<div class="textbox textbox--sidebar textbox--'+e+'"><header class="textbox__header"><p class="textbox__title">'+t+'</p></header>\n<div class="textbox__content"><p>'+n+"</p><ul><li>"+s+"</li><li>"+a+"</li></ul></div></div><p></p>"}e.addButton("textboxes",{type:"menubutton",text:e.getLang("strings.textboxes"),icon:!1,menu:[{text:e.getLang("strings.standard"),onclick:function(){var t=e.selection.getContent();""!==t?e.execCommand("mceReplaceContent",!1,'<div class="textbox">'+t+"</div><p></p>"):e.execCommand("mceInsertContent",0,'<div class="textbox">'+e.getLang("strings.standardplaceholder")+"</div><p></p>")}},{text:e.getLang("strings.standardsidebar"),onclick:function(){var t=e.selection.getContent();""!==t?e.execCommand("mceReplaceContent",!1,'<div class="textbox textbox--sidebar">'+t+"</div><p></p>"):e.execCommand("mceInsertContent",0,'<div class="textbox textbox--sidebar">'+e.getLang("strings.standardplaceholder")+"</div><p></p>")}},{text:e.getLang("strings.shaded"),onclick:function(){var t=e.selection.getContent();""!==t?e.execCommand("mceReplaceContent",!1,'<div class="textbox shaded">'+t+"</div><p></p>"):e.execCommand("mceInsertContent",0,'<div class="textbox shaded">'+e.getLang("strings.standardplaceholder")+"</div><p></p>")}},{text:e.getLang("strings.shadedsidebar"),onclick:function(){var t=e.selection.getContent();""!==t?e.execCommand("mceReplaceContent",!1,'<div class="textbox textbox--sidebar shaded">'+t+"</div><p></p>"):e.execCommand("mceInsertContent",0,'<div class="textbox textbox--sidebar shaded">'+e.getLang("strings.standardplaceholder")+"</div><p></p>")}},{text:e.getLang("strings.examples"),onclick:function(){var s="examples",a=e.selection.getContent(),o=e.getLang("strings."+s),i=e.getLang("strings.examplesplaceholder"),c=e.getLang("strings.first"),g=e.getLang("strings.second");""!==a?e.execCommand("mceReplaceContent",!1,t(s,o,a)):e.execCommand("mceInsertContent",0,n(s,o,i,c,g))}},{text:e.getLang("strings.examplessidebar"),onclick:function(){var t="examples",n=e.selection.getContent(),o=e.getLang("strings.examplessidebar"),i=e.getLang("strings.examplesplaceholder"),c=e.getLang("strings.first"),g=e.getLang("strings.second");""!==n?e.execCommand("mceReplaceContent",!1,s(t,o,n)):e.execCommand("mceInsertContent",0,a(t,o,i,c,g))}},{text:e.getLang("strings.exercises"),onclick:function(){var s="exercises",a=e.selection.getContent(),o=e.getLang("strings."+s),i=e.getLang("strings."+s+"placeholder"),c=e.getLang("strings.first"),g=e.getLang("strings.second");""!==a?e.execCommand("mceReplaceContent",!1,t(s,o,a)):e.execCommand("mceInsertContent",0,n(s,o,i,c,g))}},{text:e.getLang("strings.exercisessidebar"),onclick:function(){var t="exercises",n=e.selection.getContent(),o=e.getLang("strings."+t+"sidebar"),i=e.getLang("strings."+t+"placeholder"),c=e.getLang("strings.first"),g=e.getLang("strings.second");""!==n?e.execCommand("mceReplaceContent",!1,s(t,o,n)):e.execCommand("mceInsertContent",0,a(t,o,i,c,g))}},{text:e.getLang("strings.keytakeaways"),onclick:function(){var s="key-takeaways",a=e.selection.getContent(),o=e.getLang("strings.keytakeaways"),i=e.getLang("strings.keytakeawaysplaceholder"),c=e.getLang("strings.first"),g=e.getLang("strings.second");""!==a?e.execCommand("mceReplaceContent",!1,t(s,o,a)):e.execCommand("mceInsertContent",0,n(s,o,i,c,g))}},{text:e.getLang("strings.keytakeawayssidebar"),onclick:function(){var t="key-takeaways",n=e.selection.getContent(),o=e.getLang("strings.keytakeawayssidebar"),i=e.getLang("strings.keytakeawaysplaceholder"),c=e.getLang("strings.first"),g=e.getLang("strings.second");""!==n?e.execCommand("mceReplaceContent",!1,s(t,o,n)):e.execCommand("mceInsertContent",0,a(t,o,i,c,g))}},{text:e.getLang("strings.learningobjectives"),onclick:function(){var s="learning-objectives",a=e.selection.getContent(),o=e.getLang("strings.learningobjectives"),i=e.getLang("strings.learningobjectivesplaceholder"),c=e.getLang("strings.first"),g=e.getLang("strings.second");""!==a?e.execCommand("mceReplaceContent",!1,t(s,o,a)):e.execCommand("mceInsertContent",0,n(s,o,i,c,g))}},{text:e.getLang("strings.learningobjectivessidebar"),onclick:function(){var t="learning-objectives",n=e.selection.getContent(),o=e.getLang("strings.learningobjectivessidebar"),i=e.getLang("strings.learningobjectivesplaceholder"),c=e.getLang("strings.first"),g=e.getLang("strings.second");""!==n?e.execCommand("mceReplaceContent",!1,s(t,o,n)):e.execCommand("mceInsertContent",0,a(t,o,i,c,g))}},{text:e.getLang("strings.customellipses"),onclick:function(){var t;t=e.selection.getNode(),e.windowManager.open({title:e.getLang("strings.customtextbox"),body:{type:"textbox",name:"className",size:40,label:e.getLang("strings.classtitle"),value:t.name||t.id},onsubmit:function(t){e.execCommand("mceReplaceContent",!1,'<div class="textbox '+t.data.className+'">{$selection}</div>')}})}}]})})}});
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "/";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 18);
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./assets/src/scripts/textboxes.js":
+/***/ (function(module, exports) {
+
+/**
+ * textboxes.js
+ *
+ * Copyright, Moxiecode Systems AB
+ * Released under LGPL License.
+ *
+ * License: http://www.tinymce.com/license
+ * Contributing: http://www.tinymce.com/contributing
+ */
+
+tinymce.PluginManager.add('textboxes', function (editor) {
+	function showDialog() {
+		var selectedNode = editor.selection.getNode();
+
+		editor.windowManager.open({
+			title: editor.getLang('strings.customtextbox'),
+			body: {
+				type: 'textbox',
+				name: 'className',
+				size: 40,
+				label: editor.getLang('strings.classtitle'),
+				value: selectedNode.name || selectedNode.id
+			},
+			onsubmit: function onsubmit(e) {
+				editor.execCommand('mceReplaceContent', false, '<div class="textbox ' + e.data.className + '">{$selection}</div>');
+			}
+		});
+	}
+
+	function eduTextboxWithSelection(type, title, selection) {
+		return '<div class="textbox textbox--' + type + '"><header class="textbox__header"><p class="textbox__title">' + title + '</p></header>\n<div class="textbox__content">' + selection + '</div></div><p></p>';
+	}
+
+	function eduTextboxWithPlaceholder(type, title, placeholder, first, second) {
+		return '<div class="textbox textbox--' + type + '"><header class="textbox__header"><p class="textbox__title">' + title + '</p></header>\n<div class="textbox__content"><p>' + placeholder + '</p><ul><li>' + first + '</li><li>' + second + '</li></ul></div></div><p></p>';
+	}
+
+	function eduSidebarTextboxWithSelection(type, title, selection) {
+		return '<div class="textbox textbox--sidebar textbox--' + type + '"><header class="textbox__header"><p class="textbox__title">' + title + '</p></header>\n<div class="textbox__content">' + selection + '</div></div><p></p>';
+	}
+
+	function eduSidebarTextboxWithPlaceholder(type, title, placeholder, first, second) {
+		return '<div class="textbox textbox--sidebar textbox--' + type + '"><header class="textbox__header"><p class="textbox__title">' + title + '</p></header>\n<div class="textbox__content"><p>' + placeholder + '</p><ul><li>' + first + '</li><li>' + second + '</li></ul></div></div><p></p>';
+	}
+
+	editor.addButton('textboxes', {
+		type: 'menubutton',
+		text: editor.getLang('strings.textboxes'),
+		icon: false,
+		menu: [{
+			text: editor.getLang('strings.standard'),
+			onclick: function onclick() {
+				var selection = editor.selection.getContent();
+				if (selection !== '') {
+					editor.execCommand('mceReplaceContent', false, '<div class="textbox">' + selection + '</div><p></p>');
+				} else {
+					editor.execCommand('mceInsertContent', 0, '<div class="textbox">' + editor.getLang('strings.standardplaceholder') + '</div><p></p>');
+				}
+			}
+		}, {
+			text: editor.getLang('strings.standardsidebar'),
+			onclick: function onclick() {
+				var selection = editor.selection.getContent();
+				if (selection !== '') {
+					editor.execCommand('mceReplaceContent', false, '<div class="textbox textbox--sidebar">' + selection + '</div><p></p>');
+				} else {
+					editor.execCommand('mceInsertContent', 0, '<div class="textbox textbox--sidebar">' + editor.getLang('strings.standardplaceholder') + '</div><p></p>');
+				}
+			}
+		}, {
+			text: editor.getLang('strings.shaded'),
+			onclick: function onclick() {
+				var selection = editor.selection.getContent();
+				if (selection !== '') {
+					editor.execCommand('mceReplaceContent', false, '<div class="textbox shaded">' + selection + '</div><p></p>');
+				} else {
+					editor.execCommand('mceInsertContent', 0, '<div class="textbox shaded">' + editor.getLang('strings.standardplaceholder') + '</div><p></p>');
+				}
+			}
+		}, {
+			text: editor.getLang('strings.shadedsidebar'),
+			onclick: function onclick() {
+				var selection = editor.selection.getContent();
+				if (selection !== '') {
+					editor.execCommand('mceReplaceContent', false, '<div class="textbox textbox--sidebar shaded">' + selection + '</div><p></p>');
+				} else {
+					editor.execCommand('mceInsertContent', 0, '<div class="textbox textbox--sidebar shaded">' + editor.getLang('strings.standardplaceholder') + '</div><p></p>');
+				}
+			}
+		}, {
+			text: editor.getLang('strings.examples'),
+			onclick: function onclick() {
+				var type = 'examples';
+				var selection = editor.selection.getContent();
+				var title = editor.getLang('strings.' + type);
+				var placeholder = editor.getLang('strings.' + type + 'placeholder');
+				var first = editor.getLang('strings.first');
+				var second = editor.getLang('strings.second');
+				if (selection !== '') {
+					editor.execCommand('mceReplaceContent', false, eduTextboxWithSelection(type, title, selection));
+				} else {
+					editor.execCommand('mceInsertContent', 0, eduTextboxWithPlaceholder(type, title, placeholder, first, second));
+				}
+			}
+		}, {
+			text: editor.getLang('strings.examplessidebar'),
+			onclick: function onclick() {
+				var type = 'examples';
+				var selection = editor.selection.getContent();
+				var title = editor.getLang('strings.' + type + 'sidebar');
+				var placeholder = editor.getLang('strings.' + type + 'placeholder');
+				var first = editor.getLang('strings.first');
+				var second = editor.getLang('strings.second');
+				if (selection !== '') {
+					editor.execCommand('mceReplaceContent', false, eduSidebarTextboxWithSelection(type, title, selection));
+				} else {
+					editor.execCommand('mceInsertContent', 0, eduSidebarTextboxWithPlaceholder(type, title, placeholder, first, second));
+				}
+			}
+		}, {
+			text: editor.getLang('strings.exercises'),
+			onclick: function onclick() {
+				var type = 'exercises';
+				var selection = editor.selection.getContent();
+				var title = editor.getLang('strings.' + type);
+				var placeholder = editor.getLang('strings.' + type + 'placeholder');
+				var first = editor.getLang('strings.first');
+				var second = editor.getLang('strings.second');
+				if (selection !== '') {
+					editor.execCommand('mceReplaceContent', false, eduTextboxWithSelection(type, title, selection));
+				} else {
+					editor.execCommand('mceInsertContent', 0, eduTextboxWithPlaceholder(type, title, placeholder, first, second));
+				}
+			}
+		}, {
+			text: editor.getLang('strings.exercisessidebar'),
+			onclick: function onclick() {
+				var type = 'exercises';
+				var selection = editor.selection.getContent();
+				var title = editor.getLang('strings.' + type + 'sidebar');
+				var placeholder = editor.getLang('strings.' + type + 'placeholder');
+				var first = editor.getLang('strings.first');
+				var second = editor.getLang('strings.second');
+				if (selection !== '') {
+					editor.execCommand('mceReplaceContent', false, eduSidebarTextboxWithSelection(type, title, selection));
+				} else {
+					editor.execCommand('mceInsertContent', 0, eduSidebarTextboxWithPlaceholder(type, title, placeholder, first, second));
+				}
+			}
+		}, {
+			text: editor.getLang('strings.keytakeaways'),
+			onclick: function onclick() {
+				var type = 'key-takeaways';
+				var selection = editor.selection.getContent();
+				var title = editor.getLang('strings.keytakeaways');
+				var placeholder = editor.getLang('strings.keytakeawaysplaceholder');
+				var first = editor.getLang('strings.first');
+				var second = editor.getLang('strings.second');
+				if (selection !== '') {
+					editor.execCommand('mceReplaceContent', false, eduTextboxWithSelection(type, title, selection));
+				} else {
+					editor.execCommand('mceInsertContent', 0, eduTextboxWithPlaceholder(type, title, placeholder, first, second));
+				}
+			}
+		}, {
+			text: editor.getLang('strings.keytakeawayssidebar'),
+			onclick: function onclick() {
+				var type = 'key-takeaways';
+				var selection = editor.selection.getContent();
+				var title = editor.getLang('strings.keytakeawayssidebar');
+				var placeholder = editor.getLang('strings.keytakeawaysplaceholder');
+				var first = editor.getLang('strings.first');
+				var second = editor.getLang('strings.second');
+				if (selection !== '') {
+					editor.execCommand('mceReplaceContent', false, eduSidebarTextboxWithSelection(type, title, selection));
+				} else {
+					editor.execCommand('mceInsertContent', 0, eduSidebarTextboxWithPlaceholder(type, title, placeholder, first, second));
+				}
+			}
+		}, {
+			text: editor.getLang('strings.learningobjectives'),
+			onclick: function onclick() {
+				var type = 'learning-objectives';
+				var selection = editor.selection.getContent();
+				var title = editor.getLang('strings.learningobjectives');
+				var placeholder = editor.getLang('strings.learningobjectivesplaceholder');
+				var first = editor.getLang('strings.first');
+				var second = editor.getLang('strings.second');
+				if (selection !== '') {
+					editor.execCommand('mceReplaceContent', false, eduTextboxWithSelection(type, title, selection));
+				} else {
+					editor.execCommand('mceInsertContent', 0, eduTextboxWithPlaceholder(type, title, placeholder, first, second));
+				}
+			}
+		}, {
+			text: editor.getLang('strings.learningobjectivessidebar'),
+			onclick: function onclick() {
+				var type = 'learning-objectives';
+				var selection = editor.selection.getContent();
+				var title = editor.getLang('strings.learningobjectivessidebar');
+				var placeholder = editor.getLang('strings.learningobjectivesplaceholder');
+				var first = editor.getLang('strings.first');
+				var second = editor.getLang('strings.second');
+				if (selection !== '') {
+					editor.execCommand('mceReplaceContent', false, eduSidebarTextboxWithSelection(type, title, selection));
+				} else {
+					editor.execCommand('mceInsertContent', 0, eduSidebarTextboxWithPlaceholder(type, title, placeholder, first, second));
+				}
+			}
+		}, {
+			text: editor.getLang('strings.customellipses'),
+			onclick: function onclick() {
+				showDialog();
+			}
+		}]
+	});
+});
+
+/***/ }),
+
+/***/ 18:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("./assets/src/scripts/textboxes.js");
+
+
+/***/ })
+
+/******/ });

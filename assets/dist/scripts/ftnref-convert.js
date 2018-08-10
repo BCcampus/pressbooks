@@ -1,1 +1,121 @@
-!function(t){var n={};function e(o){if(n[o])return n[o].exports;var r=n[o]={i:o,l:!1,exports:{}};return t[o].call(r.exports,r,r.exports,e),r.l=!0,r.exports}e.m=t,e.c=n,e.d=function(t,n,o){e.o(t,n)||Object.defineProperty(t,n,{configurable:!1,enumerable:!0,get:o})},e.n=function(t){var n=t&&t.__esModule?function(){return t.default}:function(){return t};return e.d(n,"a",n),n},e.o=function(t,n){return Object.prototype.hasOwnProperty.call(t,n)},e.p="/",e(e.s=10)}({10:function(t,n,e){t.exports=e("9sVg")},"9sVg":function(t,n){tinymce.create("tinymce.plugins.ftnref_convert",{init:function(t,n){t.addButton("ftnref_convert",{title:PB_FootnotesToken.ftnref_title,icon:"icon dashicons-screenoptions",onclick:function(){jQuery.ajax({type:"post",dataType:"json",url:ajaxurl,data:{action:"pb_ftnref_convert",content:t.getContent(),_ajax_nonce:PB_FootnotesToken.nonce},beforeSend:function(){t.setProgressState(1)},success:function(n,e,o){t.setProgressState(0),t.setContent(n.content,{format:"raw"})},error:function(n){t.setProgressState(0),jQuery.trim(n.responseText).length&&alert(n.responseText)}})}})},createControl:function(t,n){return null}}),tinymce.PluginManager.add("ftnref_convert",tinymce.plugins.ftnref_convert)}});
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "/";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 10);
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./assets/src/scripts/ftnref-convert.js":
+/***/ (function(module, exports) {
+
+(function () {
+	tinymce.create('tinymce.plugins.ftnref_convert', {
+		init: function init(ed, url) {
+			ed.addButton('ftnref_convert', {
+				title: PB_FootnotesToken.ftnref_title,
+				icon: 'icon dashicons-screenoptions',
+				onclick: function onclick() {
+					jQuery.ajax({
+						type: 'post',
+						dataType: 'json',
+						url: ajaxurl,
+						data: {
+							action: 'pb_ftnref_convert',
+							content: ed.getContent(),
+							_ajax_nonce: PB_FootnotesToken.nonce
+						},
+						beforeSend: function beforeSend() {
+							ed.setProgressState(1); // Show progress
+						},
+						success: function success(data, textStatus, transport) {
+							ed.setProgressState(0); // Hide progress
+							ed.setContent(data.content, { format: 'raw' });
+						},
+						error: function error(transport) {
+							ed.setProgressState(0); // Hide progress
+							if (jQuery.trim(transport.responseText).length) {
+								alert(transport.responseText);
+							}
+						}
+					});
+				}
+			});
+		},
+		createControl: function createControl(n, cm) {
+			return null;
+		}
+	});
+	tinymce.PluginManager.add('ftnref_convert', tinymce.plugins.ftnref_convert);
+})();
+
+/***/ }),
+
+/***/ 10:
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("./assets/src/scripts/ftnref-convert.js");
+
+
+/***/ })
+
+/******/ });
